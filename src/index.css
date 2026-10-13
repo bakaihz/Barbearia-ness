@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bebas Neue", sans-serif;
+  --font-marker: "Permanent Marker", cursive;
+  --font-sans: "Outfit", sans-serif;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7), 0 10px 25px -5px rgba(37, 211, 102, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0), 0 15px 30px -5px rgba(37, 211, 102, 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-150%); }
+  50%, 100% { transform: translateX(150%); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-marker {
+    font-family: var(--font-marker);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 25s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 3s infinite ease-in-out;
+  }
+
+  .animate-float {
+    animation: floatSlow 4s ease-in-out infinite;
+  }
+
+  .whatsapp-pulse {
+    animation: pulseGlow 2.5s infinite;
+  }
+
+  .text-glow-amber {
+    text-shadow: 0 0 20px rgba(245, 158, 11, 0.6), 0 0 40px rgba(245, 158, 11, 0.2);
+  }
+
+  .text-glow-green {
+    text-shadow: 0 0 20px rgba(37, 211, 102, 0.6), 0 0 40px rgba(37, 211, 102, 0.2);
+  }
+
+  .box-glow-amber {
+    box-shadow: 0 0 35px -5px rgba(245, 158, 11, 0.25), 0 0 15px -2px rgba(245, 158, 11, 0.15);
+  }
+
+  .box-glow-whatsapp {
+    box-shadow: 0 8px 32px 0 rgba(37, 211, 102, 0.4), 0 2px 8px 0 rgba(0, 0, 0, 0.6);
+  }
+
+  .stripes-pattern {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.03) 12px,
+      transparent 12px,
+      transparent 24px
+    );
+  }
+}
+

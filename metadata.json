@@ -1,0 +1,6 @@
+{
+  "name": "Barbearia do Ness",
+  "description": "Barbearia do Ness desde 2008 no Jardim dos Francos, SP. Cortes radicais, modernos e clássicos, barba, química e agendamento rápido via WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
